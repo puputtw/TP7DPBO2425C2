@@ -45,20 +45,19 @@
 
 
 ## Penjelasan Struktur File
+   Books.php
+      Berisi class Books untuk mengelola data buku.
+      -addBook() → Menambah data buku baru ke tabel books
+      -getAll() → Mengambil seluruh data buku dari database
+      -getById() → Mengambil satu data buku berdasarkan ID
+      -updateBook() → Memperbarui data buku tertentu
+      -deleteBook() → Menghapus data buku berdasarkan ID
 
-    ## Books.php
-     Berisi class Books untuk mengelola data buku.
-     -addBook() → Menambah data buku baru ke tabel books
-     -getAll() → Mengambil seluruh data buku dari database
-     -getById() → Mengambil satu data buku berdasarkan ID
-     -updateBook() → Memperbarui data buku tertentu
-     -deleteBook() → Menghapus data buku berdasarkan ID
-
-     ## Members.php
+    Members.php
         Berisi class Member untuk mengelola data anggota pembaca. Fungsinya serupa dengan Books, tapi 
         khusus untuk tabel members. Kolom yang dikelola: member_id, name, dan email.
         
-     ## StatusReading.php
+    StatusReading.php
         Class yang mengatur data status membaca antar anggota dan buku
         Tabel reading_status berelasi dengan books dan members
         -Menambah catatan bacaan (addStatus())
@@ -67,10 +66,10 @@
         -Memperbarui catatan membaca (updateStatus())
         -Menghapus catatan membaca (deleteStatus())
 
-      ## db.php
+     db.php
          Menggunakan PDO (PHP Data Object) sebagai koneksi database 
 
-      ## index.php
+      index.php
         File utama atau entry point dari aplikasi.
         -Semua permintaan (request) pengguna pertama kali masuk ke sini.
         -Menangani proses CRUD (Tambah, Update, Delete) dari semua tabel.
@@ -93,34 +92,34 @@
         objek class ($book->addBook(), $member->deleteMember(), dll.). Setelah 
         aksi selesai, halaman di-redirect (menggunakan header("Location:..."))
 
-       ## Navigasi Halaman:
+       Navigasi Halaman:
          Navigasi utama diatur dalam index.php:
          Books → Menampilkan dan mengelola daftar buku
          Members → Menampilkan dan mengelola daftar anggota
          Reading Status → Menampilkan dan mengelola progres membaca setiap anggota
          Navigasi dilakukan menggunakan parameter URL ?page=books, ?page=members, atau ?page=reading
 
-        ## Operasi CRUD:
-           Books
+        Operasi CRUD:
+             Books
             -Read: Menampilkan semua buku dalam tabel.
             -Create: Form input untuk menambah buku baru (addBook()).
             -Update: Klik tombol Edit, form akan terisi otomatis dengan data lama, lalu update  
              (updateBook()).
             -Delete: Klik Delete, data buku akan dihapus (deleteBook()).
 
-            Members
-            -Read: Menampilkan daftar semua anggota.
-            -Create: Menambah anggota baru (addMember()).
-            -Jika email sudah ada, akan muncul pesan “Email sudah digunakan.”
-            -Update: Edit data anggota yang sudah ada (updateMember()).
-            -Delete: Hapus data anggota (deleteMember()).
+             Members
+             -Read: Menampilkan daftar semua anggota.
+             -Create: Menambah anggota baru (addMember()).
+             -Jika email sudah ada, akan muncul pesan “Email sudah digunakan.”
+             -Update: Edit data anggota yang sudah ada (updateMember()).
+             -Delete: Hapus data anggota (deleteMember()).
 
-            Reading Status
-            -Read: Menampilkan daftar relasi antara anggota dan buku yang mereka baca, lengkap dengan 
-             status, tanggal, rating, dan catatan.
-            -Create: Menambah catatan baru progres membaca (addStatus()).
-            -Update: Edit data yang sudah ada (updateStatus()), form otomatis terisi data sebelumnya.
-            -Delete: Hapus status bacaan (deleteStatus()
+             Reading Status
+              -Read: Menampilkan daftar relasi antara anggota dan buku yang mereka baca, lengkap dengan 
+               status, tanggal, rating, dan catatan.
+              -Create: Menambah catatan baru progres membaca (addStatus()).
+              -Update: Edit data yang sudah ada (updateStatus()), form otomatis terisi data sebelumnya.
+              -Delete: Hapus status bacaan (deleteStatus()
 
 
 
