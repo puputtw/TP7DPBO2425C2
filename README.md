@@ -18,14 +18,14 @@
 
 ## Tabel yang ada:
 
-    1. Tabe Books
+    1. Tabel Books
     
         Tabel ini menyimpan data buku yang tersedia dalam sistem
         -book_id, menyimpan id buku yang mana ID unik untuk setiap buku
         -title, yaitu Judul buku
         -author, yaitu Penulis buku
         -pages, jumlah halaman
-        -genre, ,jenis atau kategori bacaan
+        -genre, jenis atau kategori bacaan
 
    2. Tabel Members
       
@@ -34,7 +34,7 @@
       -name, nama anggota
       -email, email anggota tidak boleh duplikat atau sama
       
-   4. Tabel reading_status
+   3. Tabel reading_status
       
        Menyimpan hubungan antara buku dan anggota, termasuk progres membaca,memiliki foreign key ke member_
         id, dan book_id
