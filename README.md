@@ -128,8 +128,16 @@ Navigasi dilakukan menggunakan parameter URL:
 - Delete: Hapus status bacaan (deleteStatus()).  
 
 
-## Dokumentasi
 
+## Dokumentasi
+   Tabel Members:
+   https://github.com/user-attachments/assets/565d8be5-952a-49ae-965b-a363a82274de
+
+   Tabel Books:
+   https://github.com/user-attachments/assets/116b1644-bf23-47d2-8663-62423d53186f
+
+   Tabel ReadingStatus:
+   https://github.com/user-attachments/assets/b499ff5b-7feb-416d-bac9-183c3879f91f
 
 
 
