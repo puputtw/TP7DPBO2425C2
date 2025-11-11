@@ -26,6 +26,7 @@
         -author, yaitu Penulis buku
         -pages, jumlah halaman
         -genre, jenis atau kategori bacaan
+        
 
    2. Tabel Members
       
@@ -34,7 +35,8 @@
       -name, nama anggota
       -email, email anggota tidak boleh duplikat atau sama
       
-   3. Tabel reading_status
+      
+   4. Tabel reading_status
       
        Menyimpan hubungan antara buku dan anggota, termasuk progres membaca,memiliki foreign key ke member_
         id, dan book_id
@@ -45,6 +47,7 @@
        -finish_data, tanggal selesai membaca
        -rating, nilai atau rating buku dari 1/5
        -note, catatan atau review dari pembaca
+      
 
 
 ## Penjelasan Struktur File
@@ -56,10 +59,12 @@
        -getById() → Mengambil satu data buku berdasarkan ID
        -updateBook() → Memperbarui data buku tertentu
        -deleteBook() → Menghapus data buku berdasarkan ID
+       
 
     Members.php
         Berisi class Member untuk mengelola data anggota pembaca. Fungsinya serupa dengan Books, tapi 
         khusus untuk tabel members. Kolom yang dikelola: member_id, name, dan email.
+        
         
     StatusReading.php
         Class yang mengatur data status membaca antar anggota dan buku
@@ -69,6 +74,7 @@
          -Mengambil detail status baca berdasarkan ID (getById())
          -Memperbarui catatan membaca (updateStatus())
          -Menghapus catatan membaca (deleteStatus())
+
 
      db.php
          Menggunakan PDO (PHP Data Object) sebagai koneksi database 
