@@ -30,7 +30,7 @@
 
    2. Tabel Members
       
-      Tabel ini menyimpan data anggota membaca buku
+       Tabel ini menyimpan data anggota membaca buku
       -member_id, id unik anggota
       -name, nama anggota
       -email, email anggota tidak boleh duplikat atau sama
@@ -38,7 +38,7 @@
       
    4. Tabel reading_status
       
-       Menyimpan hubungan antara buku dan anggota, termasuk progres membaca,memiliki foreign key ke member_
+        Menyimpan hubungan antara buku dan anggota, termasuk progres membaca,memiliki foreign key ke member_
         id, dan book_id
        -status_id, id unik
        -member_id, id anggota(fk), dari tabel members
