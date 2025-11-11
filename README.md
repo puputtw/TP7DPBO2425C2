@@ -46,7 +46,7 @@
 
 ## Penjelasan Struktur File
 
-   ## Books.php
+    ## Books.php
      Berisi class Books untuk mengelola data buku.
      -addBook() → Menambah data buku baru ke tabel books
      -getAll() → Mengambil seluruh data buku dari database
@@ -84,8 +84,10 @@
      1. Inisialisasi sistem
         dimulai dari index.php yang memuat tiga class yaitu Books.php, 
         Member.php, StatusReading.php
+        
      2. Setiap class secara otomatis membuat koneksi ke database melalui 
         config/db.php
+        
      3. index.php adalah controller utama yang memeriksa parameter $_POST (untuk 
         Add/Update) dan $_GET (untuk Delete) dan memanggil metode yang sesuai di 
         objek class ($book->addBook(), $member->deleteMember(), dll.). Setelah 
