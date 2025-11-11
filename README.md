@@ -12,6 +12,9 @@ Sistem ini memungkinkan pengguna untuk menambahkan, mengedit, dan menghapus data
 
 ## Database
 
+<img width="1557" height="581" alt="Cuplikan layar 2025-11-10 220634" src="https://github.com/user-attachments/assets/18afdbac-a30f-4b0e-8e4f-7c7a6e497013" />
+
+
 
 ### Tabel yang ada:
 
