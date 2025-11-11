@@ -19,39 +19,43 @@
 ## Tabel yang ada:
 
     1. Tabe Books
-   Tabel ini menyimpan data buku yang tersedia dalam sistem
-   -book_id, menyimpan id buku yang mana ID unik untuk setiap buku
-   -title, yaitu Judul buku
-   -author, yaitu Penulis buku
-   -pages, jumlah halaman
-   -genre, ,jenis atau kategori bacaan
+    
+        Tabel ini menyimpan data buku yang tersedia dalam sistem
+        -book_id, menyimpan id buku yang mana ID unik untuk setiap buku
+        -title, yaitu Judul buku
+        -author, yaitu Penulis buku
+        -pages, jumlah halaman
+        -genre, ,jenis atau kategori bacaan
 
    2. Tabel Members
-     Tabel ini menyimpan data anggota membaca buku
-     -member_id, id unik anggota
-     -name, nama anggota
-     -email, email anggota tidak boleh duplikat atau sama
       
-   3. Tabel reading_status
-      Menyimpan hubungan antara buku dan anggota, termasuk progres membaca,memiliki foreign key ke member_
-      id, dan book_id
-      -status_id, id unik
-      -member_id, id anggota(fk), dari tabel members
-      -book_id, id buku(fk), dari tabel books
-      -start date, tanggal mulai membaca
-      -finish_data, tanggal selesai membaca
-      -rating, nilai atau rating buku dari 1/5
-      -note, catatan atau review dari pembaca
+      Tabel ini menyimpan data anggota membaca buku
+      -member_id, id unik anggota
+      -name, nama anggota
+      -email, email anggota tidak boleh duplikat atau sama
+      
+   4. Tabel reading_status
+      
+       Menyimpan hubungan antara buku dan anggota, termasuk progres membaca,memiliki foreign key ke member_
+        id, dan book_id
+       -status_id, id unik
+       -member_id, id anggota(fk), dari tabel members
+       -book_id, id buku(fk), dari tabel books
+       -start date, tanggal mulai membaca
+       -finish_data, tanggal selesai membaca
+       -rating, nilai atau rating buku dari 1/5
+       -note, catatan atau review dari pembaca
 
 
 ## Penjelasan Struktur File
+
    Books.php
       Berisi class Books untuk mengelola data buku.
-      -addBook() → Menambah data buku baru ke tabel books
-      -getAll() → Mengambil seluruh data buku dari database
-      -getById() → Mengambil satu data buku berdasarkan ID
-      -updateBook() → Memperbarui data buku tertentu
-      -deleteBook() → Menghapus data buku berdasarkan ID
+       -addBook() → Menambah data buku baru ke tabel books
+       -getAll() → Mengambil seluruh data buku dari database
+       -getById() → Mengambil satu data buku berdasarkan ID
+       -updateBook() → Memperbarui data buku tertentu
+       -deleteBook() → Menghapus data buku berdasarkan ID
 
     Members.php
         Berisi class Member untuk mengelola data anggota pembaca. Fungsinya serupa dengan Books, tapi 
@@ -60,20 +64,20 @@
     StatusReading.php
         Class yang mengatur data status membaca antar anggota dan buku
         Tabel reading_status berelasi dengan books dan members
-        -Menambah catatan bacaan (addStatus())
-        -Menampilkan seluruh data bacaan (getAll())
-        -Mengambil detail status baca berdasarkan ID (getById())
-        -Memperbarui catatan membaca (updateStatus())
-        -Menghapus catatan membaca (deleteStatus())
+         -Menambah catatan bacaan (addStatus())
+         -Menampilkan seluruh data bacaan (getAll())
+         -Mengambil detail status baca berdasarkan ID (getById())
+         -Memperbarui catatan membaca (updateStatus())
+         -Menghapus catatan membaca (deleteStatus())
 
      db.php
          Menggunakan PDO (PHP Data Object) sebagai koneksi database 
 
       index.php
         File utama atau entry point dari aplikasi.
-        -Semua permintaan (request) pengguna pertama kali masuk ke sini.
-        -Menangani proses CRUD (Tambah, Update, Delete) dari semua tabel.
-        -Mengatur navigasi halaman menggunakan parameter ?page=:
+         -Semua permintaan (request) pengguna pertama kali masuk ke sini.
+         -Menangani proses CRUD (Tambah, Update, Delete) dari semua tabel.
+         -Mengatur navigasi halaman menggunakan parameter ?page=:
           index.php?page=books → membuka halaman daftar buku
           index.php?page=members → membuka halaman anggota
           index.php?page=reading → membuka halaman status membaca
